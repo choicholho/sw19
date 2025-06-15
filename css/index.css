@@ -1,0 +1,497 @@
+@charset "utf-8";
+
+
+/* 
+font-family: "Roboto", sans-serif;
+font-family: "Marcellus", serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url(../images/bg-pt1.png);
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a.btn:hover {
+    background-color: rgb(45, 74, 53);
+}
+
+/* float 해제 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+
+
+
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+}
+
+
+
+header .header-inner {
+    width: 90%;
+    margin: 0 auto;
+
+    position: relative;
+    /* outline: 2px solid darkblue; */
+
+}
+
+header .logo {
+    float: left;
+    height: 100%;
+    line-height: 100px;
+}
+
+header .logo a {}
+
+header .logo a img {
+    width: 100%;
+    display: block;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    /* outline: 2px solid red; */
+
+}
+
+
+header nav .gnb li {
+    display: inline-block;
+
+    position: relative;
+}
+
+header nav .gnb>li~li {
+    margin-left: 60px;
+}
+
+
+header nav .gnb li a {
+    line-height: 100px;
+    font-size: 20px;
+    font-family: "Marcellus", serif;
+    color: rgb(255, 255, 255);
+    
+
+}
+
+header nav .gnb li a:hover {
+    color: rgb(45, 74, 53);
+    background-color: rgb(255, 255, 255);
+}
+
+/* lnb */
+header nav .gnb li .lnb {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    position: absolute;
+    left: 0;
+
+    width: 120px;
+    
+    display: none;
+
+}
+
+
+.lnb li {
+    width: 100%;
+    display: block;
+}
+
+.lnb li a {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.lnb li a:hover {
+}
+
+
+/* hero section ************************************************************************ */
+.hero {
+    background: url(../images/main.jpg) no-repeat center center/cover;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 200px;
+    height: 100%;
+
+    position: relative;
+
+}
+
+
+.hero .hero-title {
+    position: absolute;
+    left: 10%;
+    top: 60%;
+
+    color: #fff;
+}
+
+.hero .hero-title h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 100px;
+
+
+}
+
+.hero .hero-title p {
+    font-size: 26px;
+    margin-bottom: 50px;
+
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255);
+    border-radius: 5px;
+}
+
+.hero .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.hero .scroll-down img {
+    width: 100%;
+    display: block;
+}
+
+
+/* title 공통사항 */
+section .titlebox {
+
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+section .titlebox h2 {
+    font-family: 'Marcellus', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section .titlebox h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+section .titlebox h3 span {
+    color: rgb(45, 74, 53);
+}
+
+
+section .titlebox p {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+/* brand-story section***************************************************************** */
+.brand-story {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 200px;
+    text-align: center;
+
+}
+
+.brand-story .brand-img {
+    width: 100%;
+}
+
+.brand-story .brand-img img {
+    width: 100%;
+    display: block;
+
+}
+
+
+/* signatiure ************************************************************************* */
+.signature {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 200px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.signature .pro {
+    margin-bottom: 50px;
+}
+
+.signature .pro .pro-imgbox {
+    float: left;
+    width: 33.33%;
+    transition: transform 0.5s ease;
+
+}
+
+.signature .pro .pro-imgbox:hover {
+    transform: scale(1.1);
+
+}
+
+.signature .pro .pro-imgbox:first-child img {
+    border-top-left-radius: 250px;
+
+}
+
+.signature .pro .pro-imgbox:last-child img {
+    border-top-right-radius: 250px;
+}
+
+.signature .pro .pro-imgbox img {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+
+
+}
+
+.signature .pro .pro-imgbox h4 {
+    margin-bottom: 10px;
+    font-family: "Marcellus", serif;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.signature .pro .pro-imgbox p {}
+
+.signature .btn {
+    display: inline-block;
+
+
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* their-time ******************************************************************************* */
+.their-time {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 200px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.their-time .time-box {
+    margin-bottom: 50px;
+}
+
+.their-time .time-box img {
+    float: left;
+    width: 30%;
+    display: block;
+}
+
+.their-time .time-box img~img {
+    padding-left: 5%;
+}
+
+.their-time .btn {
+    display: inline-block;
+
+
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255);
+    border-radius: 5px;
+
+}
+
+/* 마퀴효과 적용*********************************************************************** */
+.wave {
+    margin-bottom: 200px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: url(../images/bg-pt2.png);
+    padding: 20px 0;
+
+}
+
+.wave span {
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-right: 50px;
+    animation: marquee 25s linear infinite;
+
+
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* own-perfume ****************************************************************************/
+.own-perfume {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.own-perfume h2 {
+    font-family: 'Marcellus', serif;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.own-perfume .slogan-box {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.own-perfume .slogan-box img {
+    width: 100%;
+    display: block;
+}
+
+.own-perfume .slogan-box h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+
+
+/* footer**************************************************************************** */
+footer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+}
+
+footer .footer-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer .footer-inner .footer-logo {
+    margin-bottom: 10px;
+}
+
+footer .footer-inner .info {
+    margin-bottom: 20px;
+}
+
+footer .footer-inner .link {
+    float: left;
+    /* outline: 2px solid red; */
+
+}
+
+footer .footer-inner .link li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer .footer-inner .link li a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+footer .footer-inner .sns {
+    float: right
+}
+
+footer .footer-inner .sns a {
+    font-size: 0;
+}
